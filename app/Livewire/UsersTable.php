@@ -15,7 +15,7 @@ class UsersTable extends Component
     public function render()
     {
         return view('livewire.users-table', [
-            'users' => User::simplePaginate($this->perPage)
+            'users' => User::simplePaginate($this->perPage),
         ]);
     }
 }

@@ -1,9 +1,9 @@
 <div>
-    <div class="w-full flex pb -10">
+    <div class=" d-flex justify-content-between pb -10">
         <div>
             <input type="text" class="rounded appearance-none block leading-tight focus:ouyline-none">
         </div>
-        <div>
+        <div class="rounded appearance-none block leading-tight focus:ouyline-none">
             <select name="" id="">
                 <option value="">ID</option>
                 <option value="">Name</option>
@@ -11,18 +11,18 @@
                 <option value="">Sign up date</option>
             </select>
         </div>
-        <div>
+        <div class="rounded appearance-none block leading-tight focus:ouyline-none">
             <select name="" id="">
-                <option value="">Ascending</option>
-                <option value="">Descending</option>
+                <option>Ascending</option>
+                <option>Descending</option>
             </select>
         </div>
-        <div>
-            <select name="" id="" wire:model='perPage'>
-                <option value="">10</option>
-                <option value="">25</option>
-                <option value="">50</option>
-                <option value="">100</option>
+        <div class="rounded appearance-none block leading-tight focus:ouyline-none">
+            <select name="" id="" wire:model="perPage">
+                <option>10</option>
+                <option>25</option>
+                <option>50</option>
+                <option>75</option>
             </select>
         </div>
     </div>
