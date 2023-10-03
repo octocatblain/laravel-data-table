@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\PagesController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,5 +23,9 @@ use Illuminate\Support\Facades\Route;
 // });
 
 // new route
-Route::get('/', [UsersController::class, 'index']);
+Route::get('/', [UsersController::class, 'index'])->name('home');
 // Route::get('/users', [UsersController::class, 'index']); //alternative route for if i scale the web app
+
+
+Route::get('/contribute', [PagesController::class, 'contribute'])->name('contribute');
+Route::get('/about', [PagesController::class, 'about'])->name('about');
