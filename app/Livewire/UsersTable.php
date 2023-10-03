@@ -23,7 +23,7 @@ class UsersTable extends Component
         return view('livewire.users-table', [
             'users' => User::search($this->search)
                 ->orderBy($this->orderBy, $this->orderAsc ? 'asc' : 'desc')
-                ->simplePaginate($this->perPage),
+                ->paginate($this->perPage),
         ]);
     }
 }
