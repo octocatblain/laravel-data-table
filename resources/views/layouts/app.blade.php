@@ -23,6 +23,8 @@
     </style>
 
     @livewireStyles()
+    @livewireScripts()
+
 </head>
 
 <body>
@@ -46,7 +48,6 @@
     {{-- <footer>
         <p>&copy; {{ date('M-Y') }} Blain Muema</p>
     </footer> --}}
-    @livewireScripts()
 </body>
 
 </html>
