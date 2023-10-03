@@ -22,4 +22,4 @@ use Illuminate\Support\Facades\Route;
 
 // new route
 Route::get('/', [UsersController::class, 'index']);
-Route::get('/users', [UsersController::class, 'index']); //alternative route for if i scale the web app
+// Route::get('/users', [UsersController::class, 'index']); //alternative route for if i scale the web app
