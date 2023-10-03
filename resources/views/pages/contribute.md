@@ -1,6 +1,3 @@
-Certainly! Below is a Markdown file summarizing the contribution you can make based on the provided code:
-
-```markdown
 # Contribution Guidelines
 
 ## Overview
@@ -72,6 +69,3 @@ If you have any questions or need assistance, feel free to open an issue or reac
 Thank you for contributing!
 
 Happy coding!
-```
-
-Feel free to customize this template according to your project's specific guidelines or add any additional information that might be relevant.

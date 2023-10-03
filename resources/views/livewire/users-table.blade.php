@@ -50,7 +50,7 @@
             @endforeach
         </tbody>
     </table>
-    <div class=" row d-flex justify-content-between">
-        {!! $users->links() !!}
+    <div class=" row d-flex text-right justify-content-between">
+        {!! $users->links('includes.pagination-links') !!}
     </div>
 </div>
