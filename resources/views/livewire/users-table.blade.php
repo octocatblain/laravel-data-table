@@ -1,4 +1,4 @@
-<div class="section">
+<div class="container">
     <div class="row d-flex justify-content-between pb-4">
         <div class="mx-1 col-3">
             <input type="text" wire:model.debounce.300ms='search'
