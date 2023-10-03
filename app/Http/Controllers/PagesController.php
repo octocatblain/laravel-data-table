@@ -11,12 +11,16 @@ class PagesController extends Controller
 {
     public function about()
     {
-        return view('pages.about');
+        $data = [
+            'pageTitle' => 'About',
+        ];
+
+        return view('pages.about', $data);
     }
 
     public function contribute()
     {
-        $markdownFilePath = public_path('resources/views/pages/contribute.md');
+        $markdownFilePath = resource_path('views/pages/contribute.md');
 
         // Check if the file exists
         if (File::exists($markdownFilePath)) {
