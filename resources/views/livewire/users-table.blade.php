@@ -2,11 +2,11 @@
     <div class="row justify-content-between pb-4">
         <div class="col-3">
             <input type="text" wire:model.debounce.300ms="search"
-                class="form-control rounded bg-gray-200 text-gray-200 py-3 px-4 leading-tight focus:outline-none">
+                class="form-control rounded bg-gray-200 text-gray-200 py-2 px-4 leading-tight focus:outline-none">
         </div>
         <div class="col-3">
             <select name="" id="" wire:model="orderBy"
-                class="form-control rounded bg-gray-200 text-gray-200 py-3 px-4 leading-tight focus:outline-none">
+                class="form-control rounded bg-gray-200 text-gray-200 py-2 px-4 leading-tight focus:outline-none">
                 <option value="id">ID</option>
                 <option value="name">Name</option>
                 <option value="email">Email</option>
@@ -15,14 +15,14 @@
         </div>
         <div class="col-3">
             <select name="" id="" wire:model="orderAsc"
-                class="form-control rounded bg-gray-200 text-gray-200 py-3 px-4 leading-tight focus:outline-none">
+                class="form-control rounded bg-gray-200 text-gray-200 py-2 px-4 leading-tight focus:outline-none">
                 <option value="1">Ascending</option>
                 <option value="0">Descending</option>
             </select>
         </div>
         <div class="col-3">
             <select name="" id="" wire:model="perPage"
-                class="form-control rounded bg-gray-200 text-gray-200 py-3 px-4 leading-tight focus:outline-none">
+                class="form-control rounded bg-gray-200 text-gray-200 py-2 px-4 leading-tight focus:outline-none">
                 <option>10</option>
                 <option>25</option>
                 <option>50</option>
@@ -30,7 +30,7 @@
             </select>
         </div>
     </div>
-    <table class="table table-responsive ">
+    <table class="table table-responsive">
         <thead>
             <tr>
                 <th>ID</th>
@@ -50,5 +50,7 @@
             @endforeach
         </tbody>
     </table>
-    {!! $users->links() !!}
+    <div class=" row d-flex justify-content-between">
+        {!! $users->links() !!}
+    </div>
 </div>
