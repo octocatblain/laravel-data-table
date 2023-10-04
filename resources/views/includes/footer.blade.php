@@ -1,5 +1,5 @@
 <footer class="bottom font-sm bg-gray-100 text-center d-flex justify-content-center">
-    <hr>
+    <hr class="my-4" />
 
     <p class="px-3">&copy; {{ date('M. Y') }} </p>
     <p class="px-3"> | </p>
