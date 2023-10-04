@@ -41,16 +41,25 @@
                 <th>Created</th>
             </tr>
         </thead>
-        <tbody>
-            @foreach ($users as $user)
+        @if ($users->count() > 0)
+            <tbody>
+                @foreach ($users as $user)
+                    <tr>
+                        <td>{{ $user->id }}</td>
+                        <td>{{ $user->name }}</td>
+                        <td>{{ $user->email }}</td>
+                        <td>{{ $user->created_at->diffForHumans() }}</td>
+                    </tr>
+                @endforeach
+            </tbody>
+        @else
+            <tbody>
                 <tr>
-                    <td>{{ $user->id }}</td>
-                    <td>{{ $user->name }}</td>
-                    <td>{{ $user->email }}</td>
-                    <td>{{ $user->created_at->diffForHumans() }}</td>
+                    <td colspan="4" class="text-center">Whoops! No users found.</td>
                 </tr>
-            @endforeach
-        </tbody>
+            </tbody>
+        @endif
+
     </table>
     <div class=" row d-flex text-right justify-content-between">
         {!! $users->links('includes.pagination-links') !!}

@@ -17,14 +17,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// defafult route
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-// new route
-
 Route::redirect('/', '/users')->name('home');
 
 Route::get('/users', [UsersController::class, 'index']);
