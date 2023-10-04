@@ -12,9 +12,9 @@ class UsersTable extends Component
 
     public $perPage = 10;
 
-    public $search = "";
+    public $search = '';
 
-    public $orderBy = "id";
+    public $orderBy = 'id';
 
     public $orderAsc = true;
 
