@@ -22,15 +22,6 @@ class UsersTable extends Component
 
     protected $listeners = ['deleteUsers'];
 
-    public function createUser()
-    {
-        $this->emit('createUser');
-
-        session()->flash('message', 'User successfully created.');
-
-        $this->reset();
-    }
-
     public function deleteUser()
     {
         User::destroy($this->selected); // delete selected users
@@ -39,12 +30,19 @@ class UsersTable extends Component
 
         session()->flash('message', 'Users successfully deleted.');
     }
+    public function updated($field)
+    {
+    }
+
     public function render()
     {
+        $total = User::count();
+
         return view('livewire.users-table', [
             'users' => User::search($this->search)
                 ->orderBy($this->orderBy, $this->orderAsc ? 'asc' : 'desc')
                 ->paginate($this->perPage),
+            'total' => $total,
         ]);
     }
 }

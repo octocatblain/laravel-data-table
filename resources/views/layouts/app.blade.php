@@ -13,15 +13,17 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
+    {{-- <style>
         body {
             /* background-color: #181A1B;
             color: #fff; */
             font-family: 'Nunito';
         }
-    </style>
+    </style> --}}
 
-    @livewireStyles
+    @livewireStyles()
+    @livewireScripts()
+
 </head>
 
 <body>
@@ -32,7 +34,6 @@
     </div>
 
     @include('includes.footer')
-    @livewireScripts
 </body>
 
 </html>
