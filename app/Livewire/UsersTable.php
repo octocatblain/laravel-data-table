@@ -18,6 +18,27 @@ class UsersTable extends Component
 
     public $orderAsc = true;
 
+    public $selected = [];
+
+    protected $listeners = ['deleteUsers'];
+
+    public function createUser()
+    {
+        $this->emit('createUser');
+
+        session()->flash('message', 'User successfully created.');
+
+        $this->reset();
+    }
+
+    public function deleteUser()
+    {
+        User::destroy($this->selected); // delete selected users
+
+        $this->selected = []; // deselect all
+
+        session()->flash('message', 'Users successfully deleted.');
+    }
     public function render()
     {
         return view('livewire.users-table', [
