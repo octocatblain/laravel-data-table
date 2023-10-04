@@ -1,28 +1,30 @@
 <div class="container">
     <div class="row justify-content-between pb-4">
         <div class="col-3">
-            <input type="text" wire:model.debounce.300ms="search"
-                class="form-control rounded bg-gray-200 text-gray-200 py-2 px-4 leading-tight focus:outline-none">
+            <input type="text" id="search" name="search" wire:model.debounce.300ms="search"
+                class="form-control rounded bg-gray-200 text-gray-200 py-2 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                placeholder="Search users...">
         </div>
         <div class="col-3">
-            <select name="" id="" wire:model="orderBy"
-                class="form-control rounded bg-gray-200 text-gray-200 py-2 px-4 leading-tight focus:outline-none">
+            <select name="order_by" id="order_by" wire:model="orderBy"
+                class="form-control rounded bg-gray-200 text-gray-200 py-2 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
                 <option value="id">ID</option>
                 <option value="name">Name</option>
                 <option value="email">Email</option>
                 <option value="created_at">Sign up date</option>
             </select>
+
         </div>
         <div class="col-3">
-            <select name="" id="" wire:model="orderAsc"
-                class="form-control rounded bg-gray-200 text-gray-200 py-2 px-4 leading-tight focus:outline-none">
+            <select name="sort_by" id="sort_by" wire:model="orderAsc"
+                class="form-control rounded bg-gray-200 text-gray-200 py-2 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
                 <option value="1">Ascending</option>
                 <option value="0">Descending</option>
             </select>
         </div>
         <div class="col-3">
-            <select name="" id="" wire:model="perPage"
-                class="form-control rounded bg-gray-200 text-gray-200 py-2 px-4 leading-tight focus:outline-none">
+            <select name="pagination" id="pagination" wire:model="perPage"
+                class="form-control rounded bg-gray-200 text-gray-200 py-2 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
                 <option>10</option>
                 <option>25</option>
                 <option>50</option>
