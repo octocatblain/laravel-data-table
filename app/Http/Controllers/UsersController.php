@@ -12,8 +12,6 @@ class UsersController extends Controller
             'pageTitle' => 'Livewire Data Table',
             'headerTitle' => 'Users',
             'menuItems' => ['Home', 'About', 'Contributing'],
-            'sectionTitle' => 'About Livewire Data Tables',
-            'sectionContent' => 'This is the about us section of my page.'
         ];
 
         return view('pages.index', $data);
