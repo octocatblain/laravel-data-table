@@ -1,3 +1,7 @@
+# PHP Laravel Livewire Data Table
+
+<img src="resources\images\laravel-data-table.png" alt="Livewire data tables example">
+
 # Contribution Guidelines
 
 ## Overview
@@ -88,9 +92,6 @@ Before submitting your pull request, ensure that your changes are well-tested an
 
 If you have any questions or need assistance, feel free to open an issue or reach out to this community.
 
-<div class="text-center">
 Thank you for contributing!
 
 Happy coding!
-
-</div>
