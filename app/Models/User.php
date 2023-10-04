@@ -47,7 +47,7 @@ class User extends Authenticatable
     {
         return empty($search) ? static::query()
             : static::query()->where('id', 'like', '%' . $search . '%')
-            ->orwhere('name', 'like', '%' . $search . '%')
-            ->orwhere('email', 'like', '%' . $search . '%');
+            ->orWhere('name', 'like', '%' . $search . '%')
+            ->orWhere('email', 'like', '%' . $search . '%');
     }
 }
