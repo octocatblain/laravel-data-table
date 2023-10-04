@@ -2,7 +2,7 @@
 
 ## Overview
 
-Thank you for considering contributing to our project! Your contributions help make our project better. Here's a brief overview of the component you can contribute to:
+Thank you for considering contributing to this project! Your contributions help make this project better. Here's a brief overview of the component you can contribute to:
 
 ### Component: User List with Filters
 
@@ -24,20 +24,38 @@ To contribute, follow these steps:
     git clone https://github.com/your-username/your-forked-repo.git
     ```
 
-3. **Make Changes**
+3. **Project setup**
+
+    Run the following commands to set up the project, make database tables and populate them.
+
+    ```bash
+    composer update
+    php artisan key:generate
+    ```
+
+    At this point make a table in your server and edit the /env.example file to .env and then run the commands below:
+
+    ```bash
+    php artisan migrate --seed
+    php artisan serve
+    ```
+
+    The last command will open a webpage in your browser at <http://127.0.0.1:8000/>
+
+4. **Make Changes**
 
     Make your desired changes to the code. You can add features, fix bugs, or improve the existing code.
 
-4. **Commit Changes**
+5. **Commit Changes**
 
     Commit your changes with a clear and descriptive commit message:
 
     ```bash
     git add .
-    git commit -m "Your descriptive commit message here"
+    git commit -m "your descriptive commit message here"
     ```
 
-5. **Push Changes**
+6. **Push Changes**
 
     Push your changes to your GitHub repository:
 
@@ -45,9 +63,9 @@ To contribute, follow these steps:
     git push origin master
     ```
 
-6. **Create Pull Request**
+7. **Create Pull Request**
 
-    Create a pull request from your forked repository to the original repository. Provide a clear title and description for your pull request.
+    Create a pull request from your forked repository to the original repository. Provide a **clear title** and **description** for your pull request.
 
 ## Code Structure
 
@@ -62,10 +80,17 @@ The code is structured as follows:
 
 Before submitting your pull request, ensure that your changes are well-tested and do not introduce any regressions.
 
+## Contributors
+
+-   <a href="https://github.com/octocatblain">Blain Muema</a>
+
 ## Help and Support
 
-If you have any questions or need assistance, feel free to open an issue or reach out to our community.
+If you have any questions or need assistance, feel free to open an issue or reach out to this community.
 
+<div class="text-center">
 Thank you for contributing!
 
 Happy coding!
+
+</div>
