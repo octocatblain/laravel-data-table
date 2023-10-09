@@ -87,12 +87,32 @@
             <thead>
                 <tr>
                     <th></th>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Email</th>
+                    @include('livewire.includes.table-sortable-th', [
+                        'columnName' => 'id',
+                        'displayName' => 'ID',
+                    ])
+                    @include('livewire.includes.table-sortable-th', [
+                        'columnName' => 'name',
+                        'displayName' => 'Name',
+                    ])
+                    @include('livewire.includes.table-sortable-th', [
+                        'columnName' => 'email',
+                        'displayName' => 'Email',
+                    ])
+                    {{-- @include('livewire.includes.table-sortable-th', [
+                        'columnName' => 'is_admin',
+                        'displayName' => 'Role',
+                    ]) --}}
+                    {{-- issue: i am unable to sort by role column --}}
                     <th>Role</th>
-                    <th>Created At</th>
-                    <th>Updated At</th>
+                    @include('livewire.includes.table-sortable-th', [
+                        'columnName' => 'created_at',
+                        'displayName' => 'Created At',
+                    ])
+                    @include('livewire.includes.table-sortable-th', [
+                        'columnName' => 'updated_at',
+                        'displayName' => 'Updated At',
+                    ])
                     <th>Actions</th>
                 </tr>
             </thead>

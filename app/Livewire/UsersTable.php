@@ -22,7 +22,24 @@ class UsersTable extends Component
 
     public $selected = [];
 
-    protected $listeners = ['deleteUsers'];
+    protected $listeners = ['deleteUsers', 'deleteUser'];
+
+    // column sorting for all fields
+    /**
+     * Summary of setSortBy
+     * @param mixed $orderByField
+     * @return void
+     */
+    public function setSortBy($orderByField)
+    {
+        if ($this->orderBy === $orderByField) {
+            $this->orderAsc = ($this->orderAsc == false) ? true : false;
+            return;
+        }
+
+        $this->orderBy = $orderByField;
+        $this->orderAsc = true;
+    }
 
     public function deleteUser(User $user)
     {
