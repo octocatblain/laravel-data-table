@@ -14,6 +14,8 @@ class UsersTable extends Component
 
     public $search = '';
 
+    public $role = '';
+
     public $orderBy = 'id';
 
     public $orderAsc = true;
@@ -40,6 +42,9 @@ class UsersTable extends Component
 
         return view('livewire.users-table', [
             'users' => User::search($this->search)
+                ->when($this->role !== 'all', function ($query) {
+                    $query->where('is_admin', $this->role);
+                })
                 ->orderBy($this->orderBy, $this->orderAsc ? 'asc' : 'desc')
                 ->paginate($this->perPage),
             'total' => $total,

@@ -1,14 +1,23 @@
 <div class="container" wire:poll.keep-alive>
     {{-- create user button --}}
-    <div class="row mt-3 justify-content-between">
-        <div class="col-4">
+    <div class="row mt-3 justify-content-between ">
+        <div class="col-4 d-flex align-items-center">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
                 {{ __('Users') }}
             </h2>
         </div>
-        <div class="col-2 d-flex align-items-center justify-content-end">
+        <div class="col-2 d-flex align-items-center justify-content-start">
 
             <p> {{ $total }} entries</p>
+        </div>
+        <div class="col-4 d-flex justify-content-end ">
+            <p class="text-bold mx-2 d-flex align-items-center">User Role: </p>
+            <select name="role" id="role" wire:model.live='role'
+                class=" rounded bg-gray-200 text-gray-200  px-3 leading-tight pt-0 focus:outline-none focus:bg-white focus:border-gray-500">
+                <option value="all">All</option>
+                <option value="1">Admin</option>
+                <option value="0">Member</option>
+            </select>
         </div>
     </div>
 
@@ -39,7 +48,6 @@
                 <option value="id">ID</option>
                 <option value="name">Name</option>
                 <option value="email">Email</option>
-                <option value="is_admin">Role</option>
                 <option value="created_at">Sign up date</option>
             </select>
 
