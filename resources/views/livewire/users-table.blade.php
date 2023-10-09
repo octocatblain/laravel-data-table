@@ -29,14 +29,9 @@
 
     <div class="row justify-content-between pb-4">
         <div class="col-4">
-<<<<<<< HEAD
             <input type="text" id="search" name="search" wire:model.live.debounce.200ms="search"
-=======
-            <input type="text" id="search" name="search" wire:model.debounce.300ms='search'
->>>>>>> 0692fd4c20b4fd99d1f0bdd30af77fc9637ce9b2
                 class="form-control rounded bg-gray-200 text-gray-200 py-2 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 placeholder="Search users...">
-
         </div>
         <div class="col-2">
             <select name="order_by" id="order_by" wire:model='orderBy'
@@ -44,6 +39,7 @@
                 <option value="id">ID</option>
                 <option value="name">Name</option>
                 <option value="email">Email</option>
+                <option value="is_admin">Role</option>
                 <option value="created_at">Sign up date</option>
             </select>
 
@@ -87,7 +83,9 @@
                     <th>ID</th>
                     <th>Name</th>
                     <th>Email</th>
-                    <th>Created</th>
+                    <th>Role</th>
+                    <th>Created At</th>
+                    <th>Updated At</th>
                 </tr>
             </thead>
             <tbody>
@@ -100,7 +98,10 @@
                         <td>{{ $user->id }}</td>
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
+                        <td class="{{ $user->is_admin ? 'text-success' : 'text-danger' }}">
+                            {{ $user->is_admin ? 'Admin' : 'Member' }}</td>
                         <td>{{ $user->created_at->diffForHumans() }}</td>
+                        <td>{{ $user->updated_at->diffForHumans() }}</td>
                     </tr>
                 @endforeach
             </tbody>
