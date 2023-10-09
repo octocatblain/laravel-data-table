@@ -24,7 +24,14 @@ class UsersTable extends Component
 
     protected $listeners = ['deleteUsers'];
 
-    public function deleteUser()
+    public function deleteUser(User $user)
+    {
+        $user->delete(); // delete user
+
+        session()->flash('message', 'User successfully deleted.');
+    }
+
+    public function deleteUsers()
     {
         User::destroy($this->selected); // delete selected users
 
@@ -32,6 +39,7 @@ class UsersTable extends Component
 
         session()->flash('message', 'Users successfully deleted.');
     }
+
     public function updated($field)
     {
     }
