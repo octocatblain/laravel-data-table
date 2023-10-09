@@ -1,15 +1,14 @@
 <div class="container" wire:poll.keep-alive>
     {{-- create user button --}}
-    <div class="row mt-2 justify-content-between">
+    <div class="row mt-3 justify-content-between">
         <div class="col-4">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
                 {{ __('Users') }}
             </h2>
         </div>
-        <div class="col-2">
-            <button wire:click='createUser' type="button" class="btn btn-outline-primary py-2 px-4">
-                Create
-            </button>
+        <div class="col-2 d-flex align-items-center justify-content-end">
+
+            <p> {{ $total }} entries</p>
         </div>
     </div>
 
@@ -30,13 +29,17 @@
 
     <div class="row justify-content-between pb-4">
         <div class="col-4">
+<<<<<<< HEAD
             <input type="text" id="search" name="search" wire:model.live.debounce.200ms="search"
+=======
+            <input type="text" id="search" name="search" wire:model.debounce.300ms='search'
+>>>>>>> 0692fd4c20b4fd99d1f0bdd30af77fc9637ce9b2
                 class="form-control rounded bg-gray-200 text-gray-200 py-2 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 placeholder="Search users...">
 
         </div>
         <div class="col-2">
-            <select name="order_by" id="order_by" wire:model="orderBy"
+            <select name="order_by" id="order_by" wire:model='orderBy'
                 class="form-control rounded bg-gray-200 text-gray-200 py-2 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
                 <option value="id">ID</option>
                 <option value="name">Name</option>
@@ -46,14 +49,14 @@
 
         </div>
         <div class="col-2">
-            <select name="sort_by" id="sort_by" wire:model="orderAsc"
+            <select name="sort_by" id="sort_by" wire:model='orderAsc'
                 class="form-control rounded bg-gray-200 text-gray-200 py-2 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
                 <option value="1">Ascending</option>
                 <option value="0">Descending</option>
             </select>
         </div>
         <div class="col-2">
-            <select name="pagination" id="pagination" wire:model="perPage"
+            <select name="pagination" id="pagination" wire:model='perPage'
                 class="form-control rounded bg-gray-200 text-gray-200 py-2 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
                 <option>10</option>
                 <option>25</option>
@@ -74,6 +77,8 @@
             </button>
         </div>
     </div>
+
+
     @if ($users->count() > 0)
         <table class="table table-responsive">
             <thead>
