@@ -52,7 +52,7 @@
             </select>
         </div>
         <div class="col-2">
-            <select name="pagination" id="pagination" wire:model='perPage'
+            <select name="pagination" id="pagination" wire:model.live='perPage'
                 class="form-control rounded bg-gray-200 text-gray-200 py-2 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
                 <option>10</option>
                 <option>25</option>
@@ -98,7 +98,7 @@
                         <td>{{ $user->id }}</td>
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
-                        <td class="{{ $user->is_admin ? 'text-success' : 'text-danger' }}">
+                        <td class="{{ $user->is_admin ? 'text-danger' : 'text-secondary' }}">
                             {{ $user->is_admin ? 'Admin' : 'Member' }}</td>
                         <td>{{ $user->created_at->diffForHumans() }}</td>
                         <td>{{ $user->updated_at->diffForHumans() }}</td>
@@ -106,7 +106,7 @@
                 @endforeach
             </tbody>
         </table>
-        <div class=" row d-flex text-right justify-content-between">
+        <div class=" row d-flex text-right justify-content-between ">
             {!! $users->links('includes.pagination-links') !!}
         </div>
     @else
