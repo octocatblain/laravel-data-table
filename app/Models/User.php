@@ -44,11 +44,22 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-    public static function search($search)
+    // first implementation of search
+
+    // public static function search($search)
+    // {
+    //     return empty($search) ? static::query()
+    //         : static::query()->where('id', 'like', '%' . $search . '%')
+    //         ->orWhere('name', 'like', '%' . $search . '%')
+    //         ->orWhere('email', 'like', '%' . $search . '%');
+    // }
+
+    // second implementation of search
+
+    public function scopeSearch($query, $value)
     {
-        return empty($search) ? static::query()
-            : static::query()->where('id', 'like', '%' . $search . '%')
-            ->orWhere('name', 'like', '%' . $search . '%')
-            ->orWhere('email', 'like', '%' . $search . '%');
+        $query->where('id', 'like', "%{$value}%")
+            ->orWhere('name', 'like', "%{$value}%")
+            ->orWhere('email', 'like', "%{$value}%");
     }
 }

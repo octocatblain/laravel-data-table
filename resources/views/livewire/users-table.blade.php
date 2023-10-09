@@ -29,7 +29,7 @@
 
     <div class="row justify-content-between pb-4">
         <div class="col-4">
-            <input type="text" id="search" name="search" wire:model.live.debounce.200ms="search"
+            <input type="text" id="search" name="search" wire:model.live.debounce.300ms="search"
                 class="form-control rounded bg-gray-200 text-gray-200 py-2 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 placeholder="Search users...">
         </div>
