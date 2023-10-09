@@ -14,7 +14,7 @@ class UsersTable extends Component
     #[Url(history: true)]
     public $perPage = 10;
 
-    #[Url(history: true, as: 's')]
+    #[Url(as: 's', history: true, keep: true)]
     public $search = '';
 
     #[Url(history: true)]
