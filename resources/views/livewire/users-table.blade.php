@@ -111,7 +111,8 @@
                         <td>{{ $user->created_at->diffForHumans() }}</td>
                         <td>{{ $user->updated_at->diffForHumans() }}</td>
                         <td class="text-center">
-                            <svg wire:click='deleteUser({{ $user->id }})' xmlns="http://www.w3.org/2000/svg"
+                            <svg onclick="confirm('Are you sure you want to delete User {{ $user->id }} : {{ $user->name }} ?') || event.stopImmediatePropagation()"
+                                wire:click='deleteUser({{ $user->id }})' xmlns="http://www.w3.org/2000/svg"
                                 width="15" height="15" fill="currentColor" class="bi bi-trash3 "
                                 viewBox="0 0 16 16" data-darkreader-inline-fill="" style="color: red; cursor:pointer">
                                 <path
