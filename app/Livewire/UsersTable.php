@@ -4,22 +4,29 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use App\Models\User;
+use Livewire\Attributes\Url;
 use Livewire\WithPagination;
 
 class UsersTable extends Component
 {
     use WithPagination;
 
+    #[Url(history: true)]
     public $perPage = 10;
 
+    #[Url(history: true, as: 's')]
     public $search = '';
 
+    #[Url(history: true)]
     public $role = '';
 
+    #[Url(history: true)]
     public $orderBy = 'id';
 
+    #[Url(history: true)]
     public $orderAsc = true;
 
+    #[Url(history: true)]
     public $selected = [];
 
     protected $listeners = ['deleteUsers', 'deleteUser'];
