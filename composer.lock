@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "01a7dc4f3097da62b93606e96b4c3c49",
+    "content-hash": "ef0c748d53d473590b34baabc5041f46",
     "packages": [
         {
             "name": "brick/math",
@@ -502,86 +502,6 @@
                 }
             ],
             "time": "2022-02-20T15:07:15+00:00"
-        },
-        {
-            "name": "graham-campbell/markdown",
-            "version": "v15.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/GrahamCampbell/Laravel-Markdown.git",
-                "reference": "3c0bcf904ec02acb1afd0e23e7c170ac5199fc14"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Markdown/zipball/3c0bcf904ec02acb1afd0e23e7c170ac5199fc14",
-                "reference": "3c0bcf904ec02acb1afd0e23e7c170ac5199fc14",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/contracts": "^8.75 || ^9.0 || ^10.0",
-                "illuminate/filesystem": "^8.75 || ^9.0 || ^10.0",
-                "illuminate/support": "^8.75 || ^9.0 || ^10.0",
-                "illuminate/view": "^8.75 || ^9.0 || ^10.0",
-                "league/commonmark": "^2.3.9",
-                "php": "^7.4.15 || ^8.0.2"
-            },
-            "require-dev": {
-                "graham-campbell/analyzer": "^4.0",
-                "graham-campbell/testbench": "^6.0",
-                "mockery/mockery": "^1.5.1",
-                "phpunit/phpunit": "^9.6.3 || ^10.0.12"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "GrahamCampbell\\Markdown\\MarkdownServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "GrahamCampbell\\Markdown\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Graham Campbell",
-                    "email": "hello@gjcampbell.co.uk",
-                    "homepage": "https://github.com/GrahamCampbell"
-                }
-            ],
-            "description": "Markdown Is A CommonMark Wrapper For Laravel",
-            "keywords": [
-                "Graham Campbell",
-                "GrahamCampbell",
-                "Laravel Markdown",
-                "Laravel-Markdown",
-                "common mark",
-                "commonmark",
-                "framework",
-                "laravel",
-                "markdown"
-            ],
-            "support": {
-                "issues": "https://github.com/GrahamCampbell/Laravel-Markdown/issues",
-                "source": "https://github.com/GrahamCampbell/Laravel-Markdown/tree/v15.0.0"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/GrahamCampbell",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/graham-campbell/markdown",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2023-02-26T14:22:13+00:00"
         },
         {
             "name": "graham-campbell/result-type",
@@ -6452,16 +6372,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "10.1.6",
+            "version": "10.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "56f33548fe522c8d82da7ff3824b42829d324364"
+                "reference": "355324ca4980b8916c18b9db29f3ef484078f26e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/56f33548fe522c8d82da7ff3824b42829d324364",
-                "reference": "56f33548fe522c8d82da7ff3824b42829d324364",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/355324ca4980b8916c18b9db29f3ef484078f26e",
+                "reference": "355324ca4980b8916c18b9db29f3ef484078f26e",
                 "shasum": ""
             },
             "require": {
@@ -6518,7 +6438,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
                 "security": "https://github.com/sebastianbergmann/php-code-coverage/security/policy",
-                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/10.1.6"
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/10.1.7"
             },
             "funding": [
                 {
@@ -6526,7 +6446,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-09-19T04:59:03+00:00"
+            "time": "2023-10-04T15:34:17+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",

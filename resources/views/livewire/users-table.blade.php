@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" wire:poll.keep-alive>
     {{-- create user button --}}
     <div class="row mt-2 justify-content-between">
         <div class="col-4">
@@ -30,7 +30,7 @@
 
     <div class="row justify-content-between pb-4">
         <div class="col-4">
-            <input type="text" id="search" name="search" wire:model.debounce.300ms="search"
+            <input type="text" id="search" name="search" wire:model.live.debounce.200ms="search"
                 class="form-control rounded bg-gray-200 text-gray-200 py-2 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 placeholder="Search users...">
 
